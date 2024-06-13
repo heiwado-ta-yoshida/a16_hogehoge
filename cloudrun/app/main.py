@@ -1,9 +1,9 @@
-import  logging
+import logging
 
 # ロガー設定
-google.cloud.logging.Client().setup_logging()
+# google.cloud.logging.Client().setup_logging()
 
-@app.post(f"/")
+@app.get(f"/")
 def output_log():
 
     logging.info(f"[log]:start")
