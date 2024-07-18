@@ -4,6 +4,6 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-COPY ./ /
+COPY ./app /app
 
-ENV PYTHONPATH /routers
+ENV PYTHONPATH /app
