@@ -14,3 +14,5 @@ def output_log():
 
     except ExceptionError:
         logging.error(f"[log]:error!!")
+
+    return "done"
