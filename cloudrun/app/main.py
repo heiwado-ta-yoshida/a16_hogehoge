@@ -1,18 +1,15 @@
+from fastapi import FastAPI
 import logging
 
 # ロガー設定
 # google.cloud.logging.Client().setup_logging()
 
+app = FastAPI()
+
 @app.get(f"/")
-def output_log():
-
+def home():
     logging.info(f"[log]:start")
+    return 'Hello World!'
 
-    try:
-        logging.info(f"[log]:hogehoge")
-        raise ExceptionError
-
-    except ExceptionError:
-        logging.error(f"[log]:error!!")
-
-    return "done"
+if __name__ == "__main__":
+    app.run()
